@@ -36,7 +36,7 @@ class NewContactSubmission extends Notification implements ShouldQueue
             ->line('**IP-adres:** ' . $this->submission->ip_address)
             ->line('**User agent:** ' . $this->submission->user_agent)
             ->line('**Status:** ' . $this->submission->status->value)
-            ->action('Bekijk inzending', url('/admin/contact-submissions/' . $this->submission->id))
+            ->action('Bekijk inzending', url('/admin/contact-submissions/'))
             ->salutation("Met vriendelijke groet,\nHet Coachklik-systeem");
     }
 
