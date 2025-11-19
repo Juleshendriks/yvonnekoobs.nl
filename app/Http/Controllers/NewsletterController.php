@@ -4,28 +4,27 @@ namespace App\Http\Controllers;
 
 use App\Models\NewsletterSubscriber;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
+use App\Notifications\NewSubscriberConfirmation;
+use App\Notifications\UnsubscribedConfirmation;
 
 class NewsletterController extends Controller
 {
     public function subscribe(Request $request)
     {
-        $data = $request->validate(
-            [
-                'email' => 'required|email',
-                'name' => 'required',
-            ]
-        );
+        $data = $request->validate([
+            'email' => 'required|email',
+            'name' => 'required|string',
+        ]);
 
-
-        $subscriber = NewsletterSubscriber::where('email', $data['email'])->first();
-
-        if ($subscriber) {
-            $subscriber->active = 1;
-        } else {
-            $subscriber = new NewsletterSubscriber($data);
-        }
-
+        $subscriber = NewsletterSubscriber::firstOrNew(['email' => $data['email']]);
+        $subscriber->name = $data['name'];
+        $subscriber->active = true;
         $subscriber->save();
+
+        // Verstuur queueable bevestiging
+        Notification::route('mail', $subscriber->email)
+            ->notify(new NewSubscriberConfirmation($subscriber->name, $subscriber->email));
 
         return redirect()->back()->with('success', 'Bedankt voor je aanmelding!');
     }
@@ -42,10 +41,13 @@ class NewsletterController extends Controller
             $subscriber->active = false;
             $subscriber->save();
 
-            return view('web.newsletter.unsubscribe-success'); // Blade with Vue inside
+            // Verstuur queueable uitschrijvingsbevestiging
+            Notification::route('mail', $subscriber->email)
+                ->notify(new UnsubscribedConfirmation($subscriber->name));
+
+            return view('web.newsletter.unsubscribe-success');
         }
 
         return view('web.newsletter.unsubscribe-failed');
     }
-
 }
