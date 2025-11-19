@@ -173,7 +173,7 @@
                         </h2>
                         <p class="text-gray-600 leading-relaxed mb-6">
                             Alle inhoud op deze website, inclusief teksten, afbeeldingen, logo's en designs, is eigendom van
-                            [Naam Coach] of gebruikt onder licentie. Ongeautoriseerd gebruik is niet toegestaan.
+                            Yvonne Koobs Coaching of gebruikt onder licentie. Ongeautoriseerd gebruik is niet toegestaan.
                         </p>
 
                         <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">

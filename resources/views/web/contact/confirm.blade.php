@@ -167,9 +167,9 @@
                         </div>
                     </div>
 
-                    <a href="tel:+31612345678" class="inline-flex items-center px-8 py-4 bg-white hover:bg-gray-100 text-[#0c6885] font-semibold rounded-xl transition-colors duration-300 shadow-lg">
+                    <a href="tel:+31642305664" class="inline-flex items-center px-8 py-4 bg-white hover:bg-gray-100 text-[#0c6885] font-semibold rounded-xl transition-colors duration-300 shadow-lg">
                         <i class="fas fa-phone mr-3"></i>
-                        06 - 12 34 56 78
+                        +31 6 42305664
                     </a>
 
                     <p class="text-white/80 text-sm mt-4">

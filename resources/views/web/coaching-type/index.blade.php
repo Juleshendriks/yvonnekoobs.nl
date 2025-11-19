@@ -124,9 +124,9 @@
                         <i class="fas fa-calendar-check mr-3"></i>
                         Plan een kennismakingsgesprek
                     </a>
-                    <a href="tel:+31612345678" class="inline-flex items-center px-8 py-4 bg-transparent hover:bg-white/10 text-white font-semibold rounded-xl border-2 border-white transition-colors duration-300">
+                    <a href="tel:+31642305664" class="inline-flex items-center px-8 py-4 bg-transparent hover:bg-white/10 text-white font-semibold rounded-xl border-2 border-white transition-colors duration-300">
                         <i class="fas fa-phone mr-3"></i>
-                        Bel direct: 06 - 12 34 56 78
+                        Bel direct: +31 6 42305664
                     </a>
                 </div>
             </div>

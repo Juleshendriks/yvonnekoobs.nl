@@ -58,7 +58,7 @@
                             1. Algemeen
                         </h2>
                         <p class="text-gray-600 leading-relaxed mb-6">
-                            Deze algemene voorwaarden zijn van toepassing op alle diensten die worden geleverd door [Naam Coach],
+                            Deze algemene voorwaarden zijn van toepassing op alle diensten die worden geleverd door Yvonne Koobs Coaching,
                             ingeschreven bij de Kamer van Koophandel onder nummer [KvK nummer]. Deze voorwaarden gelden voor alle
                             coaching trajecten, workshops, digitale producten en overige dienstverlening.
                         </p>

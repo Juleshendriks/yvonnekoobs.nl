@@ -129,7 +129,7 @@
                             <i class="fas fa-envelope mr-2"></i>
                             Stuur een bericht
                         </a>
-                        <a href="tel:+31612345678" class="inline-flex items-center px-6 py-3 border-2 border-[#0c6885] text-[#0c6885] font-semibold rounded-lg hover:bg-[#0c6885] hover:text-white transition-colors">
+                        <a href="tel:+31642305664" class="inline-flex items-center px-6 py-3 border-2 border-[#0c6885] text-[#0c6885] font-semibold rounded-lg hover:bg-[#0c6885] hover:text-white transition-colors">
                             <i class="fas fa-phone mr-2"></i>
                             Bel direct
                         </a>

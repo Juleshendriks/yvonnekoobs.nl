@@ -58,7 +58,7 @@
                             1. Wie zijn wij?
                         </h2>
                         <p class="text-gray-600 leading-relaxed mb-6">
-                            [Naam Coach] is verantwoordelijk voor de verwerking van jouw persoonsgegevens.
+                            Yvonne Koobs Coaching is verantwoordelijk voor de verwerking van jouw persoonsgegevens.
                             Wij respecteren jouw privacy en handelen volgens de Algemene Verordening Gegevensbescherming (AVG).
                         </p>
 

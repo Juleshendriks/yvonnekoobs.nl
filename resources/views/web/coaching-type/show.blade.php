@@ -143,7 +143,7 @@
                             <i class="fas fa-calendar-check mr-3"></i>
                             Start vandaag nog
                         </a>
-                        <a href="tel:+31612345678"
+                        <a href="tel:+31642305664"
                            class="inline-flex items-center justify-center rounded-xl border-2 border-white px-8 py-4 text-sm font-semibold text-white hover:bg-white hover:text-[#0c6885] transition-colors duration-300">
                             <i class="fas fa-phone mr-3"></i>
                             Bel voor info

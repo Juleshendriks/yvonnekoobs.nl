@@ -156,15 +156,15 @@
                             <!-- Mobile Contact Info -->
                             <div class="pt-6 border-t border-gray-200">
                                 <div class="space-y-3">
-                                    <a href="tel:+31612345678"
+                                    <a href="tel:+31642305664"
                                        class="flex items-center text-gray-600 hover:text-[#0c6885] transition-colors">
                                         <i class="fas fa-phone mr-3 text-[#0c6885] w-5"></i>
-                                        06 - 12 34 56 78
+                                        +31 6 42305664
                                     </a>
-                                    <a href="mailto:info@coach.nl"
+                                    <a href="mailto:info@yvonnekoobs.nl"
                                        class="flex items-center text-gray-600 hover:text-[#0c6885] transition-colors">
                                         <i class="fas fa-envelope mr-3 text-[#0c6885] w-5"></i>
-                                        info@coach.nl
+                                        info@yvonnekoobs.nl
                                     </a>
                                 </div>
                             </div>

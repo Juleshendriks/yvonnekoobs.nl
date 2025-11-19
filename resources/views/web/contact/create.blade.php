@@ -88,8 +88,8 @@
                                 <div class="ml-4">
                                     <h3 class="font-semibold text-gray-900">E-mail</h3>
                                     <p class="text-gray-600">
-                                        <a href="mailto:{{ $profile->email ?? 'info@coach.nl' }}" class="text-[#0c6885] hover:text-[#0a5a73] transition-colors">
-                                            {{ $profile->email ?? 'info@coach.nl' }}
+                                        <a href="mailto:{{ $profile->email ?? 'info@yvonnekoobs.nl' }}" class="text-[#0c6885] hover:text-[#0a5a73] transition-colors">
+                                            {{ $profile->email ?? 'info@yvonnekoobs.nl' }}
                                         </a>
                                     </p>
                                 </div>
@@ -102,8 +102,8 @@
                                 <div class="ml-4">
                                     <h3 class="font-semibold text-gray-900">Telefoon</h3>
                                     <p class="text-gray-600">
-                                        <a href="tel:{{ $profile->telefoon ?? '+31612345678' }}" class="text-[#92c24f] hover:text-[#7da542] transition-colors">
-                                            {{ $profile->telefoon ?? '06 - 12 34 56 78' }}
+                                        <a href="tel:{{ $profile->telefoon ?? '+31642305664' }}" class="text-[#92c24f] hover:text-[#7da542] transition-colors">
+                                            {{ $profile->telefoon ?? '+31 6 42305664' }}
                                         </a>
                                     </p>
                                     <p class="text-sm text-gray-500">Ma-Vr 9:00-17:00</p>

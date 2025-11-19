@@ -270,7 +270,7 @@
                             <i class="fas fa-calendar mr-3"></i>
                             {{ $profile->cta_text ?? 'Plan een gesprek' }}
                         </a>
-                        <a href="tel:+31612345678" class="inline-flex items-center px-8 py-4 bg-transparent hover:bg-[#0c6885]/10 text-[#0c6885] font-semibold rounded-xl border-2 border-[#0c6885] transition-colors duration-300">
+                        <a href="tel:+31642305664" class="inline-flex items-center px-8 py-4 bg-transparent hover:bg-[#0c6885]/10 text-[#0c6885] font-semibold rounded-xl border-2 border-[#0c6885] transition-colors duration-300">
                             <i class="fas fa-phone mr-3"></i>
                             Bel direct
                         </a>
@@ -290,7 +290,7 @@
                             <i class="fas fa-calendar mr-3"></i>
                             Plan een gesprek
                         </a>
-                        <a href="tel:+31612345678" class="inline-flex items-center px-8 py-4 bg-transparent hover:bg-[#0c6885]/10 text-[#0c6885] font-semibold rounded-xl border-2 border-[#0c6885] transition-colors duration-300">
+                        <a href="tel:+31642305664" class="inline-flex items-center px-8 py-4 bg-transparent hover:bg-[#0c6885]/10 text-[#0c6885] font-semibold rounded-xl border-2 border-[#0c6885] transition-colors duration-300">
                             <i class="fas fa-phone mr-3"></i>
                             Bel direct
                         </a>
