@@ -15,6 +15,7 @@ class NewsletterController extends Controller
         $data = $request->validate([
             'email' => 'required|email',
             'name' => 'required|string',
+            'last_name' => 'prohibited'
         ]);
 
         $subscriber = NewsletterSubscriber::firstOrNew(['email' => $data['email']]);

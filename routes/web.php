@@ -10,7 +10,7 @@ use App\Http\Controllers\Web\ContactController as WebContactController;
 
 Route::name('web.')->group(function () {
 
-    Route::post('/newsletter/subscribe', [NewsletterController::class, 'subscribe'])->name('newsletter.subscribe');
+    Route::post('/newsletter/subscribe', [NewsletterController::class, 'subscribe'])->name('newsletter.subscribe')->middleware('throttle:3,1');
     Route::get('/newsletter/unsubscribe', [NewsletterController::class, 'unsubscribe'])->name('newsletter.unsubscribe');
 
     Route::get('/', [WebPagesController::class, 'home'])->name('home');

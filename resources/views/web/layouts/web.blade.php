@@ -265,9 +265,10 @@
                     <div class="flex flex-col gap-y-4">
                         <div>
                             <label for="name" class="sr-only">Naam</label>
-                            <input id="name" type="text" name="text" required placeholder="Voer je naam in"
+                            <input id="name" type="text" name="name" required placeholder="Voer je naam in"
                                    class="w-full min-w-0 rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-500 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-[#0c6885] sm:w-64 sm:text-sm/6 xl:w-full" />
                         </div>
+                        <input id="last_name" type="text" name="last_name" class="hidden">
                         <div>
 
                             <label for="email-address" class="sr-only">E-mailadres</label>
