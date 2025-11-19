@@ -8,7 +8,9 @@ use App\Models\CoachingType;
 use App\Models\ContactSubmission;
 use App\Enums\ContactSubmissionStatus;
 use App\Models\Profile;
+use App\Models\User;
 use App\Notifications\ContactConfirmationMail;
+use App\Notifications\NewContactSubmission;
 use Illuminate\Support\Facades\Notification;
 
 class ContactController extends Controller
@@ -62,8 +64,15 @@ class ContactController extends Controller
 
         // Send notifications
         if ($submission->status !== ContactSubmissionStatus::Afgewezen) {
+
             Notification::route('mail', $request->email)
                 ->notify(new ContactConfirmationMail($submission));
+
+            $users = User::where('is_admin', true)->get();
+
+            foreach ($users as $user) {
+                $user->notify(new NewContactSubmission($submission));
+            }
         }
 
         return redirect()->route('web.contact.confirm');
