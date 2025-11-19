@@ -70,7 +70,7 @@
 
                                     <!-- Summary -->
                                     @if($coachingType->summary)
-                                        <p class="text-gray-600 mb-6 leading-relaxed">{{ Str::limit($coachingType->summary, 120) }}</p>
+                                        <p class="text-gray-600 mb-6 leading-relaxed">{!!  Str::limit($coachingType->summary, 120) !!}</p>
                                     @endif
 
                                     <!-- Footer -->

@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
 //            ReviewSeeder::class,
 //            FaqSeeder::class,
 //            CoachingTypeSeeder::class,,
-            ProductSeeder::class,
+//            ProductSeeder::class,
         ]);
     }
 }
