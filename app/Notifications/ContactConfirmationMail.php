@@ -3,11 +3,12 @@
 namespace App\Notifications;
 
 use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Messages\MailMessage;
 use App\Models\ContactSubmission;
 
-class ContactConfirmationMail extends Notification
+class ContactConfirmationMail extends Notification implements ShouldQueue
 {
     use Queueable;
 
