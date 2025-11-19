@@ -74,7 +74,7 @@
                                     @endif
 
                                     <!-- Footer -->
-                                    <div class="flex items-center justify-between">
+                                    <div class="flex items-center justify-between mt-4">
                                         <a href="{{ route('web.coaching-types.show', $coachingType->slug) }}" class="inline-flex items-center text-[#0c6885] hover:text-[#0a5a73] font-semibold transition-colors duration-300 group">
                                             Meer informatie
                                             <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
