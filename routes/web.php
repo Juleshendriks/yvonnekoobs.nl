@@ -29,7 +29,10 @@ Route::name('web.')->group(function () {
     Route::get('/contact', [WebContactController::class, 'create'])->name('contact.create');
     Route::get('/veelgestelde-vragen', [WebPagesController::class, 'faq'])->name('faq');
     Route::get('/bedankt-voor-je-bericht', [WebContactController::class, 'confirm'])->name('contact.confirm');
-    Route::post('/contact', [WebContactController::class, 'store'])->name('contact.store');
+
+    Route::post('/contact', [WebContactController::class, 'store'])
+        ->middleware('throttle:3,1') // 3 requests per 1 minuut
+        ->name('contact.store');
 
     Route::get('/algemene-voorwaarden', [WebPagesController::class, 'terms'])->name('terms');
     Route::get('/privacybeleid', [WebPagesController::class, 'privacy'])->name('privacy');

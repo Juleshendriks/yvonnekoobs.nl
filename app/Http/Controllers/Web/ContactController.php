@@ -16,10 +16,21 @@ class ContactController extends Controller
     public function create()
     {
         session(['contact_form_loaded_at' => now()->timestamp]);
+
+        // Generate simple human check
+        $a = rand(1, 9);
+        $b = rand(1, 9);
+
+        session([
+            'contact_sum_a' => $a,
+            'contact_sum_b' => $b,
+            'contact_sum_result' => $a + $b,
+        ]);
+
         $profile = Profile::first();
         $coachingTypes = CoachingType::orderBy('title')->get();
 
-        return view('web.contact.create', compact('profile', 'coachingTypes'));
+        return view('web.contact.create', compact('profile', 'coachingTypes', 'a', 'b'));
     }
 
     public function confirm()
@@ -30,37 +41,32 @@ class ContactController extends Controller
 
     public function store(ContactSubmissionRequest $request)
     {
-        // Check rate limiting
-//        if ($request->hasRecentSubmission()) {
-//            return back()->with('error', 'Je hebt recent al een bericht gestuurd. Wacht even voordat je opnieuw probeert.');
-//        }
+        // Validate human check
+        $correct = session('contact_sum_result');
+        if ($request->input('human_check') != $correct) {
+            return back()
+                ->withInput()
+                ->withErrors(['human_check' => 'De som is niet correct. Probeer het opnieuw.']);
+        }
 
         // Get validated data with metadata
         $data = $request->getValidatedDataForStorage();
 
         // Check for spam
         if ($request->isPotentialSpam()) {
-            $data['status'] = ContactSubmissionStatus::Afgewezen;
+            return redirect()->back();
         }
 
         // Save submission
         $submission = ContactSubmission::create($data);
 
-        // Send notifications (alleen als niet afgewezen)
+        // Send notifications
         if ($submission->status !== ContactSubmissionStatus::Afgewezen) {
-
-
             Notification::route('mail', $request->email)
                 ->notify(new ContactConfirmationMail($submission));
-
-            \Log::info('Contact submission received', [
-                'submission_id' => $submission->id,
-                'name' => $submission->name,
-                'email' => $submission->email,
-                'subject' => $submission->subject,
-            ]);
         }
 
         return redirect()->route('web.contact.confirm');
     }
+
 }

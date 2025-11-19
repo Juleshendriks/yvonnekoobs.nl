@@ -279,6 +279,22 @@
                                 </div>
                             </div>
 
+                            <div>
+                                <label for="human_check" class="block text-sm font-semibold text-gray-900 mb-2">
+                                    <i class="fas fa-robot text-[#92c24f] mr-2"></i>
+                                    Beveiligingsvraag: hoeveel is {{ $a }} + {{ $b }}? <span class="text-red-500">*</span>
+                                </label>
+
+                                <input
+                                    type="number"
+                                    name="human_check"
+                                    id="human_check"
+                                    required
+                                    class="block w-full rounded-xl border-0 px-4 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300"
+                                    placeholder="Antwoord hier">
+                            </div>
+
+
                             <!-- Submit Button -->
                             <div>
                                 <button
